@@ -126,7 +126,7 @@ ARG PHP_VER
 
 # MISP code
     # Download MISP using git in the /var/www/ directory.
-    RUN git clone --branch ${MISP_TAG} --depth 1 https://github.com/tobmes42/MISP.git /var/www/MISP; \
+    RUN git clone --branch ${MISP_TAG} --depth 1 https://github.com/MISP/MISP.git /var/www/MISP; \
         # We build the MISP modules outside, so we don't need to grab those submodules
         cd /var/www/MISP/app || exit; git submodule update --init --recursive .;
 
